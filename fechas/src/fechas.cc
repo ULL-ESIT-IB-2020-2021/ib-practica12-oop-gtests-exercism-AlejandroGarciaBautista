@@ -6,7 +6,6 @@
   *
   * @file fechas.cc
   * @author Alejandro García Bautista
-  * @date 27/12/20
   * @brief ....
   * @bug ......
 */
@@ -31,4 +30,3 @@ void Usage(int argc, char* argv[]){
     exit(EXIT_SUCCESS);
   }
 }
-

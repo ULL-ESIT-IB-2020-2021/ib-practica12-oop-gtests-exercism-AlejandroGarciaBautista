@@ -6,9 +6,12 @@
   *
   * @file fechas_main.cc
   * @author Alejandro García Bautista
-  * @date 27/12/20
   * @brief ....
   * @bug ....
+*/
+
+/**
+  * El ejercicio no esta terminado por no saber como desarrollar la idea que tenia en mente. 
 */
 
 #include <iostream>
