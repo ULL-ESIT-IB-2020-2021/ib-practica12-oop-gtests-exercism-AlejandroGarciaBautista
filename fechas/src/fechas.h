@@ -10,4 +10,11 @@
   * @brief ....
   * @bug ......
 */
+
+#pragma once 
+
 void Usage(int argc, char* argv[]);
+
+class Date{
+  private:
+}

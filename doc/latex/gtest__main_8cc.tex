@@ -1,0 +1,32 @@
+\hypertarget{gtest__main_8cc}{}\subsection{test/gtest\+\_\+main.cc File Reference}
+\label{gtest__main_8cc}\index{test/gtest\+\_\+main.\+cc@{test/gtest\+\_\+main.\+cc}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for gtest\+\_\+main.\+cc\+:
+% FIG 0
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+ int \hyperlink{gtest__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{gtest__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}\label{gtest__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}} 
+\index{gtest\+\_\+main.\+cc@{gtest\+\_\+main.\+cc}!main@{main}}
+\index{main@{main}!gtest\+\_\+main.\+cc@{gtest\+\_\+main.\+cc}}
+\paragraph{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+ int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file gtest\+\_\+main.\+cc.
+
+
+\begin{DoxyCode}
+4                                            \{
+5   std::cout << \textcolor{stringliteral}{"Ejecutando main() del programa complejo\_main.cc\(\backslash\)n"};
+6   testing::InitGoogleTest(&argc, argv);
+7   \textcolor{keywordflow}{return} RUN\_ALL\_TESTS();
+8 \}
+\end{DoxyCode}

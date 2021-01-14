@@ -1,0 +1,72 @@
+\hypertarget{complex__test_8cc}{}\subsection{test/complex\+\_\+test.cc File Reference}
+\label{complex__test_8cc}\index{test/complex\+\_\+test.\+cc@{test/complex\+\_\+test.\+cc}}
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}complejo.\+h\char`\"{}}\newline
+Include dependency graph for complex\+\_\+test.\+cc\+:
+% FIG 0
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{complex__test_8cc_a20a9e25b95da7e670ebbac9637c2efca}{T\+E\+ST} (Addition\+Test, add)
+\begin{DoxyCompactList}\small\item\em En este caso nos encontramos con los test de la parte de la suma y de la resta, que nos comprueban con los siguientes datos que todo se esta efectuando correctamente, en los return de Add y Sub vemos que son una suma y por eso vemos un 20 y un -\/2 ya que esa seria la respuesta de la suma de la parte real + la parte imaginaria. \end{DoxyCompactList}\item 
+\hyperlink{complex__test_8cc_a6544faa2aefd4177bd1a505fd760da23}{T\+E\+ST} (Substraction\+Test, sub)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{complex__test_8cc_a20a9e25b95da7e670ebbac9637c2efca}\label{complex__test_8cc_a20a9e25b95da7e670ebbac9637c2efca}} 
+\index{complex\+\_\+test.\+cc@{complex\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!complex\+\_\+test.\+cc@{complex\+\_\+test.\+cc}}
+\paragraph{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Addition\+Test}]{,  }\item[{add}]{ }\end{DoxyParamCaption})}
+
+
+
+En este caso nos encontramos con los test de la parte de la suma y de la resta, que nos comprueban con los siguientes datos que todo se esta efectuando correctamente, en los return de Add y Sub vemos que son una suma y por eso vemos un 20 y un -\/2 ya que esa seria la respuesta de la suma de la parte real + la parte imaginaria. 
+
+
+
+Definition at line 9 of file complex\+\_\+test.\+cc.
+
+
+
+References complex\+\_\+number\+::add(), and result.
+
+
+\begin{DoxyCode}
+9                        \{
+10   \hyperlink{classcomplex__number}{complex\_number} complex1(4, 5);
+11   \hyperlink{classcomplex__number}{complex\_number} complex2(7, 4);
+12   \hyperlink{classcomplex__number}{complex\_number} \hyperlink{complejo_8cc_a3d01611ed0f921d1c40a739b2ca8c9fa}{result}(0,0);
+13   
+14   EXPECT\_EQ(20, \hyperlink{complejo_8cc_a3d01611ed0f921d1c40a739b2ca8c9fa}{result}.\hyperlink{classcomplex__number_ad65b2d6465bb82ba98cc31937268d120}{add}(complex1,complex2));
+15 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{complex__test_8cc_a6544faa2aefd4177bd1a505fd760da23}\label{complex__test_8cc_a6544faa2aefd4177bd1a505fd760da23}} 
+\index{complex\+\_\+test.\+cc@{complex\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!complex\+\_\+test.\+cc@{complex\+\_\+test.\+cc}}
+\paragraph{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Substraction\+Test}]{,  }\item[{sub}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file complex\+\_\+test.\+cc.
+
+
+
+References result, and complex\+\_\+number\+::sub().
+
+
+\begin{DoxyCode}
+17                            \{
+18   \hyperlink{classcomplex__number}{complex\_number} complex1(4, 5);
+19   \hyperlink{classcomplex__number}{complex\_number} complex2(7, 4);
+20   \hyperlink{classcomplex__number}{complex\_number} \hyperlink{complejo_8cc_a3d01611ed0f921d1c40a739b2ca8c9fa}{result}(0,0);
+21 
+22   EXPECT\_EQ(-2, \hyperlink{complejo_8cc_a3d01611ed0f921d1c40a739b2ca8c9fa}{result}.\hyperlink{classcomplex__number_a556956d95765b498f92c44b16ae4a573}{sub}(complex1,complex2));
+23 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 2

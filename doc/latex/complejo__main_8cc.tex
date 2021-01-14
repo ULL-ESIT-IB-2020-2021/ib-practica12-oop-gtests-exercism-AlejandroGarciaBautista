@@ -1,0 +1,61 @@
+\hypertarget{complejo__main_8cc}{}\subsection{src/complejo\+\_\+main.cc File Reference}
+\label{complejo__main_8cc}\index{src/complejo\+\_\+main.\+cc@{src/complejo\+\_\+main.\+cc}}
+
+
+Universidad de La Laguna Escuela Superior de Ingeniería y Tecnología Grado en Ingeniería Informática Informática Básica.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}complejo.\+h\char`\"{}}\newline
+Include dependency graph for complejo\+\_\+main.\+cc\+:
+% FIG 0
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{complejo__main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Universidad de La Laguna Escuela Superior de Ingeniería y Tecnología Grado en Ingeniería Informática Informática Básica. 
+
+\begin{DoxyAuthor}{Author}
+Alejandro García Bautista 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+27/12/20 Programa que suma y resta dos complejos. Si se desea cambiar los datos de los números complejos solo hay que modificarlos desde este archivo y despues ir a la carpeta build y ejecutar el comando make nuevamente. 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000002}{Bug}]Ninguno conocido por el momento. \end{DoxyRefDesc}
+
+
+\subsubsection{Function Documentation}
+\mbox{\Hypertarget{complejo__main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{complejo__main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{complejo\+\_\+main.\+cc@{complejo\+\_\+main.\+cc}!main@{main}}
+\index{main@{main}!complejo\+\_\+main.\+cc@{complejo\+\_\+main.\+cc}}
+\paragraph{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file complejo\+\_\+main.\+cc.
+
+
+
+References complex\+\_\+number\+::add(), complex\+\_\+number\+::print(), result, and complex\+\_\+number\+::sub().
+
+
+\begin{DoxyCode}
+19            \{
+20   \hyperlink{classcomplex__number}{complex\_number} complex1(4, 5);
+21   \hyperlink{classcomplex__number}{complex\_number} complex2(7, -8);
+22   \hyperlink{classcomplex__number}{complex\_number} \hyperlink{complejo_8cc_a3d01611ed0f921d1c40a739b2ca8c9fa}{result}(0,0);
+23   complex1.print();
+24   complex2.print();
+25   \hyperlink{complejo_8cc_a3d01611ed0f921d1c40a739b2ca8c9fa}{result}.\hyperlink{classcomplex__number_ad65b2d6465bb82ba98cc31937268d120}{add}(complex1,complex2);
+26   \hyperlink{complejo_8cc_a3d01611ed0f921d1c40a739b2ca8c9fa}{result}.\hyperlink{classcomplex__number_a556956d95765b498f92c44b16ae4a573}{sub}(complex1,complex2);
+27   \textcolor{keywordflow}{return} 0;
+28 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+% FIG 1

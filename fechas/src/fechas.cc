@@ -15,6 +15,7 @@
 #include <fstream>
 #include "fechas.h"
 #include <string>
+#include <vector>
 
 std::string kHelpText = "Modo de uso: ./fecha fichero_de_entrada.txt fichero_de_salida.txt";
 
@@ -30,3 +31,4 @@ void Usage(int argc, char* argv[]){
     exit(EXIT_SUCCESS);
   }
 }
+

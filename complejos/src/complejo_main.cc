@@ -7,8 +7,9 @@
   * @file complejo_main.cc
   * @author Alejandro García Bautista
   * @date 27/12/20
-  * @brief ....
-  * @bug ......
+  * @brief Programa que suma y resta dos complejos. Si se desea cambiar los datos de los números complejos solo hay que modificarlos
+  *        desde este archivo y despues ir a la carpeta build y ejecutar el comando make nuevamente. 
+  * @bug Ninguno conocido por el momento.
 */
 
 #include <iostream>

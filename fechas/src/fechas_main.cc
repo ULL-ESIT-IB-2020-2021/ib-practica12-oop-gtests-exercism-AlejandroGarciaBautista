@@ -28,7 +28,6 @@ int main (int argc, char* argv[]){
   }
   while(file_dates){
     std::getline(file_dates, dates);
-    std::vector <std::string> all_dates = dates;
   }
   
 }

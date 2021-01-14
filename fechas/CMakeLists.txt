@@ -5,29 +5,30 @@
 #
 # @author Alejandro García Bautista 
 # @date 23/12/2020
-# @brief CMakeLists.txt example
-# CMakeLists.txt defines the whole build
-# CMake reads CMakeLists.txt sequentially
-#
-# Build process:
+# @brief CMakeLists.txt del ejercicio de fechas
+# 
+# Proceso:
 #   1. cd <project_folder>
 #   2. mkdir build
 #   3. cd build
 #   4. cmake ..
 #   5. make
 
-
 cmake_minimum_required(VERSION 3.1)  # Mandatory
 
 # set the project name 
-project(Fecha               # Mandatory
+project(GTests                # Mandatory
     VERSION 1.0
-    DESCRIPTION "Clase llamada Fecha que permite gestionar y representar las fechas"
+    DESCRIPTION "Cmake del ejercicio de fechas."
     LANGUAGES CXX)
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 14) 						# Use c++14
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Locate GTest
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
 
 # tell cmake to output binaries here:
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
@@ -40,50 +41,25 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 # tell cmake where to look for *.h files
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
-
-# Adds an executable target called "fechas" to be built from the source files listed in the command invocation.
-add_executable(fechas
-    src/fechas.h
+# Adds an executable target called "runTests" to be built from the source files listed in the command invocation.
+add_executable(runTests
+    test/gtest_main.cc
     src/fechas.cc
-    src/fechas_main.cc)
+    src/fechas.h
+    test/test.cc
 
-# tell the linker to bind these objects together
-# It's important to place target_link_libraries after the add_executable and find_package lines, so all linked components are known.
-# target_link_libraries(fechas.h)
+    )
+
+add_executable(user_program
+    src/fechas_main.cc
+    src/fechas.cc
+    src/fechas.h
+)
+
+target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 
 # Add expected compiler features to a target.
-target_compile_features(fechas PRIVATE cxx_std_14)
+target_compile_features(runTests PRIVATE cxx_std_14)
 
 # Add compile options to a target.
-target_compile_options(fechas PRIVATE -Wall -Wextra -Wpedantic)
-
-
-############################################################
-# Build doxygen from CMake script
-# https://stackoverflow.com/questions/34878276/build-doxygen-from-cmake-script
-# https://cmake.org/cmake/help/latest/module/FindDoxygen.html
-############################################################
-
-find_package(Doxygen)
-option(BUILD_DOCUMENTATION "Create and install the documentation (requires Doxygen)" ${DOXYGEN_FOUND})
-
-if(BUILD_DOCUMENTATION)
-    if(NOT DOXYGEN_FOUND)
-         message(FATAL_ERROR "Doxygen is needed to build the documentation.")
-    endif()
-
-    set(doxyfile_in ${CMAKE_CURRENT_SOURCE_DIR}/fecha.Doxyfile)
-    set(doxyfile ${CMAKE_CURRENT_BINARY_DIR}/doxyfile)
-
-    configure_file(${doxyfile_in} ${doxyfile} @ONLY)
-
-    message("Doxygen build started.")
-
-    add_custom_target(doc ALL
-                      COMMAND ${DOXYGEN_EXECUTABLE} ${doxyfile_in}
-                      WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/doc
-                      COMMENT "Generating API documentation with Doxygen"
-                      VERBATIM)
-
-    #    install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION     share/doc)
-endif()
+target_compile_options(runTests PRIVATE -Wall -Wextra -Wpedantic)

@@ -1,3 +1,19 @@
+# Universidad de La Laguna
+# Escuela Superior de Ingeniería y Tecnología
+# Grado en Ingeniería Informática
+# Informática Básica
+#
+# @author Alejandro García Bautista 
+# @date 23/12/2020
+# @brief CMakeLists.txt del ejercicio de complejos
+# 
+# Proceso:
+#   1. cd <project_folder>
+#   2. mkdir build
+#   3. cd build
+#   4. cmake ..
+#   5. make
+
 cmake_minimum_required(VERSION 3.1)  # Mandatory
 
 # set the project name 

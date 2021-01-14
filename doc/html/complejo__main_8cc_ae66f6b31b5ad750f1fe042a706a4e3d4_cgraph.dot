@@ -1,0 +1,14 @@
+digraph "main"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="complex_number::add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcomplex__number.html#ad65b2d6465bb82ba98cc31937268d120",tooltip="La función add suma por separado la parte real y la parte imaginaria y luego hace lo mismo que la fun..."];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="complex_number::print",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcomplex__number.html#a8700aec615b980b0c20f8c181ea1d5ff",tooltip="La función print, agrupa la parte real y imaginaria del número para ponerlo en una frase que te indic..."];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="complex_number::sub",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcomplex__number.html#a556956d95765b498f92c44b16ae4a573",tooltip="La función sub hace el mismo funcionamiento que la add pero en este caso en vez de sumar resta y tien..."];
+}

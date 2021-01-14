@@ -7,11 +7,8 @@
   * @file complejo.h
   * @author Alejandro García Bautista
   * @date 27/12/20
-  * @brief ....
-  * @bug ......
+  * @brief La definición de la clase de complex number.
 */
-
-#pragma once 
 
 class complex_number{
   public:
@@ -23,5 +20,3 @@ class complex_number{
   double real;
   double imaginary;  
 };
-
-
