@@ -16,7 +16,7 @@
 #include "fechas.h"
 #include <string>
 
-std::string kHelpText = "Modo de uso: ./fecha dd/mm/aa N fichero_de_salida.txt"
+std::string kHelpText = "Modo de uso: ./fecha fichero_de_entrada.txt fichero_de_salida.txt";
 
 void Usage(int argc, char* argv[]){
   if(argc != 3){

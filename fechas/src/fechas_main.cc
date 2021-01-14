@@ -15,16 +15,20 @@
 #include <fstream>
 #include "fechas.h"
 #include <string>
-
-class Fecha {
-  public:
-    int day;
-    int month;
-    int year;
-
-}
+#include <vector>
 
 
 int main (int argc, char* argv[]){
   Usage(argc, argv);
+  std::ifstream file_dates (argv[1]);
+  std::ofstream out_file (argv[2]);
+  std::string dates;
+  if(!file_dates){
+    std::cout << "No se pudo abrir el archivo" << std::endl;
+  }
+  while(file_dates){
+    std::getline(file_dates, dates);
+    std::vector <std::string> all_dates = dates;
+  }
+  
 }
